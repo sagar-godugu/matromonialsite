@@ -1,0 +1,230 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    /* height: 100vh;
+    width: 100%; */
+}
+
+html,body{
+    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #c3ebc0;
+    background-image: url('./m5.webp');
+    background-size:cover;
+    background-repeat:repeat;
+    background-position:center;
+}
+#root{
+    height: 100%;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content:center;
+    /* padding-right: 100px;
+    padding-top:10px;*/
+    padding-bottom:20px; 
+
+}
+.registerFormContainer{
+    display: flex;
+    width:45%;
+    height:100%;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    background-color:rgb(245,245,245,0.3);
+    padding: 20px;
+    gap: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 2px black;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.registerFormContainer>form{
+    display: flex;
+    /* height: 100%; */
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width:95%;
+    gap: 25px;
+   
+    
+}
+.registerFormContainer>form>div{
+    height: 100%;
+    width: 100%;
+    
+}
+.registerFormContainer>form>div>h1,.loginFormContainer>form>div>h1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.registerFormContainer>form>div>input{
+    height:35px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 5px;
+
+}
+
+.registerFormContainer>form>div>input::placeholder,.registerFormContainer>form>div>textarea::placeholder{
+    font-weight: 700;
+    color: black;
+}
+.registerFormContainer>form>div>select{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 5px;
+}
+.registerFormContainer>form>div>textarea{
+    height:60px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 5px;
+}
+.registerFormContainer>form>div:nth-child(6){
+    display: flex;
+    font-weight: 700;
+     padding: 5px;
+
+    gap:10px;
+}
+.registerFormContainer>form>div:nth-child(6)>div{
+    display: flex;
+    gap: 5px;
+}
+.registerFormContainer>form>div:nth-child(16){
+    display: flex;
+    flex-direction: column;
+    /* height: 60px; */
+    width: 100%;
+    /* justify-content: center; */
+    font-weight: 700;
+    padding:5px;
+    gap:10px;
+}
+.registerFormContainer>form>div:nth-child(16)>div:first-child{
+    font-size:18px;
+}
+.registerFormContainer>form>div:nth-child(16)>div:last-child{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.registerFormContainer>form>div:nth-child(17){
+    display: flex;
+    flex-direction: column;
+    /* height: 60px; */
+    width: 100%;
+    /* justify-content: center; */
+    font-weight: 700;
+    padding:5px;
+    gap:10px;
+}
+.registerFormContainer>form>div:nth-child(17)>div:first-child{
+    font-size:18px;
+}
+.registerFormContainer>form>div:nth-child(17)>div:last-child{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.registerFormContainer>form>div>button,.loginFormContainer>form>div>button{
+    background-color: crimson;
+    height:35px;
+    width: 100%;
+    border: none;
+    outline: none;
+    /* background-color: white; */
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 5px;
+    /* color: hotpink; */
+}
+.registerFormContainer>form>div>button:hover{
+    cursor: pointer;
+}
+.loginFormContainer{
+    display: flex;
+    width:40%;
+    height:50%;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    background-color:rgb(245,245,245,0.3);
+    /* background-color: #c3ebc0; */
+    padding: 20px;
+    gap: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 2px black;
+    /* overflow-y: scroll; */
+}
+.loginFormContainer>form{
+    display: flex;
+    /* height: 50%; */
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width:100%;
+    gap: 25px;
+    /* background-color: red;   */
+}
+.loginFormContainer>form>div>input{
+    height:35px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 5px;
+
+}
+.loginFormContainer>form>div{
+    height: 100%;
+    width: 100%;
+    /* background-color: blue; */   
+}
+.loginFormContainer>form>div>input::placeholder{
+    font-weight: 700;
+    color: black;
+
+}
+.cardContainer{
+    height: 100%;
+    width: 100%;
+    /* background-color:; */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 50px;
+    padding: 100px;
+}
+.card{
+    height: 200px;
+    width: 200px;
+    background-color: #c3ebc0;
+    box-shadow: 0px 0px 30px 1px black;
+}
+
+
+
