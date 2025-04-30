@@ -1,7 +1,12 @@
 import { home } from "./home.js"
+import navbar, { navBinder } from "./navbar.js"
 
 let login=()=>{
+    setTimeout(()=>{
+        navBinder()
+    })
     return `
+    ${navbar()}
     <div class="loginFormContainer">
             <form action="">
                 <div>
@@ -44,7 +49,7 @@ export let loginHandler=()=>{
         };
         try{
             (async ()=>{
-                let res=await fetch("http://127.0.0.1:8000/api/auth/login/",{
+                let res=await fetch("http://192.168.4.220:8000/api/auth/login/",{
                     method:"POST",
                     headers:{
                         "Content-Type":"application/json"
@@ -53,20 +58,28 @@ export let loginHandler=()=>{
                 })
                 let data=await res.json()
                 window.sessionStorage.setItem('token',`${data.token}`)
-                console.log(data.token)
+               
                 console.log(data);
+                if (data.token){
+                    alert('Login Successful..')
+                    history.pushState(null,"",'/home')
+                    root.innerHTML=home()
+                }
+                else{
+                    alert('Invalid Username or Password')
+                    history.pushState(null,"",'/login')
+                    root.innerHTML=login()
+                }  
             })();
+        
 
         }
         catch(error){
             console.log(error);
             alert("something went wrong !!!")
         }
-
-        history.pushState(null,"",'/home')
-        root.innerHTML=home()
+        
     }
-
     allInputs.forEach((inp)=>{
         inp.addEventListener('change',handleChange)
     })

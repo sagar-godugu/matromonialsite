@@ -1,8 +1,12 @@
-import login from "./login.js"
+import login, { loginHandler } from "./login.js"
+import navbar, { navBinder } from "./navbar.js"
 
 export let register=()=>{
-  
+    setTimeout(()=>{
+        navBinder()
+    })
     return `
+    ${navbar()}
       <div class="registerFormContainer">
             <form action="">
                 <div>
@@ -54,7 +58,7 @@ export let register=()=>{
                     <option value="Sagittarius">Sagittarius</option>
                     <option value="Capricorn">Capricorn</option>
                     <option value="Aquarius">Aquarius</option>
-                    <option value="piscos">piscos</option>
+                    <option value="Piscos">Piscos</option>
 
                 </select>
                 </div>
@@ -231,7 +235,7 @@ export let registerHandler=()=>{
         };
         try{
             (async()=>{
-                let res=await fetch("http://127.0.0.1:8000/api/auth/register/",{
+                let res=await fetch("http://192.168.4.220:8000/api/auth/register/",{
                     method:"POST",
                     body:formData,
                 })
@@ -247,6 +251,7 @@ export let registerHandler=()=>{
 
         history.pushState(null,"","/login")
         root.innerHTML=login()
+        loginHandler()
     
     }
     
